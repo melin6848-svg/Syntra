@@ -1,1 +1,29 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Danke</title><link rel='stylesheet' href='style.css'></head><body><div class='card'><h1>🎉 Danke für deinen Kauf!</h1><p>Produkt: Syntra Private</p><a class='btn' href='download.html'>Download</a><a class='btn' href='https://discord.gg/6ecV8rBYnj'>Discord</a><p>Sende deinen Kaufnachweis oder Key im Ticket für deine Rolle.</p></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Success</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+
+    <h1>🎉 Purchase Successful</h1>
+
+    <h2>🔑 Your Key</h2>
+    <div class="key-box" id="key">Loading...</div>
+
+    <a class="btn" href="https://YOUR-DOWNLOAD-LINK.com">Download</a>
+    <a class="btn" href="https://discord.gg/6ecV8rBYnj">Discord</a>
+
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("key").innerText = params.get("key") || "No key";
+</script>
+
+</body>
+</html>
